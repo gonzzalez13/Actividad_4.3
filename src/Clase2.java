@@ -11,11 +11,12 @@ public class Clase2 {
 		int sumatorio=0;
 		System.out.println("### Programa de suma de números y calculo de su media ###");
 		
+		
 		introducirNumeros(lista, x);
-			
-		extracted(lista, sumatorio);
+		System.out.println(contarNum(lista,sumatorio));
+		System.out.println(extracted(lista, sumatorio));
 	}
-	private static void extracted(ArrayList<Integer> lista, int sumatorio) {
+	public static int extracted(ArrayList<Integer> lista, int sumatorio) {
 		int tamañoLista;
 		int calculoMedia;
 		for (int i = 0; i < lista.size(); i++) {
@@ -24,9 +25,19 @@ public class Clase2 {
 		
 		tamañoLista=lista.size();
 		calculoMedia=sumatorio/tamañoLista;
-		System.out.println("La suma de los números es "+sumatorio+" y la media es "+calculoMedia);
+		return calculoMedia;
 	}
-	private static void introducirNumeros(ArrayList<Integer> lista, boolean x) {
+	
+	public static int contarNum(ArrayList<Integer> lista, int sumatorio) {
+		for (int i = 0; i < lista.size(); i++) {
+			sumatorio=sumatorio+lista.get(i);
+		}
+		
+		return sumatorio;
+	}
+	
+	
+	public static void introducirNumeros(ArrayList<Integer> lista, boolean x) {
 		String resp;
 		do {
 			System.out.println("\nIntroduce número");
@@ -38,7 +49,7 @@ public class Clase2 {
 			}else if(resp.equals("n")) {
 				x=false;
 			}
-		}while(x==true);
+		}while(x==true);	
 	}
 
 }

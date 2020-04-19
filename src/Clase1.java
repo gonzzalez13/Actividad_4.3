@@ -5,10 +5,10 @@ public class Clase1 {
 	int suma=0;
 	int numero [] = new int [5];
 	
-	numeros(suma,numero);
+	System.out.println(numeros(suma,numero));
 	
 	}
-	public static void numeros(int suma,int numero []) {
+	public static int numeros(int suma,int numero []) {
 		System.out.println("Escribe 5 numeros");
 		for (int i = 0; i <5; i++) {
 			System.out.println("Numero "+(i+1));
@@ -20,6 +20,6 @@ public class Clase1 {
 			}
 		}
 		
-		System.out.println("Ahi "+suma+" numeros que acaban en 3");
+		return suma;
 		}
 }
