@@ -5,21 +5,25 @@ public class Clase1 {
 	int suma=0;
 	int numero [] = new int [5];
 	
-	numeros(suma,numero);
+	System.out.println("Escribe 5 números");
+	
+	for (int i = 0; i <5; i++) {
+		System.out.println("Número "+(i+1));
+		numero[i] =  sc.nextInt();
+	}
+	
+	System.out.println("hay "+numeros(suma,numero)+" que terminan en 3");
 	
 	}
-	public static void numeros(int suma,int numero []) {
-		System.out.println("Escribe 5 numeros");
-		for (int i = 0; i <5; i++) {
-			System.out.println("Numero "+(i+1));
-			numero[i] =  sc.nextInt();
-		}
+	
+	public static int numeros(int suma,int numero []) {
+		
 		for (int i = 0; i < numero.length; i++) {
 			if(numero[i]%10==3) {
 				suma+=1;
 			}
 		}
-		
-		System.out.println("Ahi "+suma+" numeros que acaban en 3");
-		}
+		return suma;		
+	}
+	
 }
