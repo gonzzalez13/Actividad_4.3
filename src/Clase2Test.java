@@ -17,7 +17,7 @@ class Clase2Test {
 		lista.add(5);
 		lista.add(5);
 		int resultado=Clase2.contarNum(lista, 10);
-		assertEquals(20,resultado);
+		assertEquals(resultado,20);
 	}
 
 }

@@ -5,11 +5,13 @@ public class Clase1 {
 	int suma=0;
 	int numero [] = new int [5];
 	
-	System.out.println(numeros(suma,numero));
+	System.out.println("Escribe 5 numeros");
+	System.out.println("hay "+numeros(suma,numero)+" que terminan en 3");
 	
 	}
 	public static int numeros(int suma,int numero []) {
-		System.out.println("Escribe 5 numeros");
+		
+		
 		for (int i = 0; i <5; i++) {
 			System.out.println("Numero "+(i+1));
 			numero[i] =  sc.nextInt();
