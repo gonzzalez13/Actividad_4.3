@@ -15,15 +15,22 @@ public class Clase1 {
 	System.out.println("hay "+numeros(suma,numero)+" que terminan en 3");
 	
 	}
-	
+
 	public static int numeros(int suma,int numero []) {
-		
+
 		for (int i = 0; i < numero.length; i++) {
 			if(numero[i]%10==3) {
 				suma+=1;
 			}
 		}
+
 		return suma;		
 	}
-	
 }
+
+		
+
+	
+
+	
+
